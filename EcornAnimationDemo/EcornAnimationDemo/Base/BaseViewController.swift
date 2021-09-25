@@ -11,12 +11,12 @@ import SnapKit
 
 class BaseViewController:UIViewController{
     
-    var view_Body: UIView!
-    var btn_Play: UIButton!
+    public var view_Body: UIView!
+    public var btn_Play: UIButton!
     
-    let margin_Top: CGFloat = 100.0 //位置上移
-    let margin_ViewWidthHeight: CGFloat = 100.0 //view宽高
-    let margin_ViewMidPosition: CGFloat = 50.0
+    public let margin_Top: CGFloat = 100.0 //位置上移
+    public let margin_ViewWidthHeight: CGFloat = 100.0 //view宽高
+    public let margin_ViewMidPosition: CGFloat = 50.0
     
     
     override func viewDidLoad() {
@@ -32,7 +32,7 @@ class BaseViewController:UIViewController{
 extension BaseViewController{
     
     @objc func playBtnClick(btn:UIButton){
-        
+        print("playBtnClick")
     }
 }
 
