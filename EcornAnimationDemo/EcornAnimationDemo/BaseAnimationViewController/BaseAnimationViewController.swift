@@ -47,7 +47,21 @@ class BaseAnimationViewController: BaseViewController{
 
 extension BaseAnimationViewController{
     override func playBtnClick(btn: UIButton) {
-        positionAnimation()
+        switch type.rawValue{
+        case 0:
+            positionAnimation()
+        case 1:
+            rotationAnimation()
+        case 2:
+            scaleAnimation()
+        case 3:
+            opacityAnimation()
+        case 4:
+            backgroundAnimation()
+        default:
+            break
+        }
+        
     }
 }
 
@@ -58,6 +72,38 @@ extension BaseAnimationViewController{
         animation.toValue = CGPoint.init(x: kScreenW - margin_ViewMidPosition, y: kScreenH / 2 - margin_Top)
         animation.duration = 1.0
         view_Body.layer.add(animation, forKey: "positionAnimation") //key自定义
+    }
+    
+    func rotationAnimation(){
+        let animation = CABasicAnimation.init(keyPath: "transform.rotation.z")
+        animation.toValue = NSNumber.init(value:Double.pi)
+        animation.duration = 0.1
+        animation.repeatDuration = 1e100
+        view_Body.layer.add(animation, forKey: "rotateAnimation")
+    }
+    
+    //缩放动画
+    func scaleAnimation() {
+        
+        let animation = CABasicAnimation.init(keyPath: "transform.scale")
+        animation.toValue = NSNumber.init(value: 2.0)
+        animation.duration = 5.0
+        view_Body.layer.add(animation, forKey: "scaleAnimation")
+    }
+    
+    func opacityAnimation(){
+        let animation = CABasicAnimation.init(keyPath: "opacity")
+        animation.fromValue = NSNumber.init(value: 1.0)
+        animation.toValue = NSNumber.init(value: 0.0)
+        animation.duration = 1.0
+        view_Body.layer.add(animation, forKey: "opacityAnimation")
+    }
+    
+    func backgroundAnimation(){
+        let animation = CABasicAnimation.init(keyPath: "backgroundColor")
+        animation.toValue = UIColor.green.cgColor //因为layer层动画, 所以需要使用cgColor
+        animation.duration = 1.0
+        view_Body.layer.add(animation, forKey: "backgroundColorAnimation")
     }
 }
 
