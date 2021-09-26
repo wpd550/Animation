@@ -17,6 +17,7 @@
 		C48999B526FF271100970C4D /* BaseConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48999B426FF271100970C4D /* BaseConst.swift */; };
 		C48999B826FF284000970C4D /* BaseAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48999B726FF283F00970C4D /* BaseAnimationViewController.swift */; };
 		C48999BA26FF292700970C4D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48999B926FF292600970C4D /* BaseViewController.swift */; };
+		F595F9F82700C55800CB715A /* KeyAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F595F9F72700C55800CB715A /* KeyAnimationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		C48999B426FF271100970C4D /* BaseConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConst.swift; sourceTree = "<group>"; };
 		C48999B726FF283F00970C4D /* BaseAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAnimationViewController.swift; sourceTree = "<group>"; };
 		C48999B926FF292600970C4D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F595F9F72700C55800CB715A /* KeyAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyAnimationController.swift; sourceTree = "<group>"; };
 		F84BDD0FBEFA6A533AA5B795 /* Pods-EcornAnimationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EcornAnimationDemo.debug.xcconfig"; path = "Target Support Files/Pods-EcornAnimationDemo/Pods-EcornAnimationDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 		C489999E26FF23FE00970C4D /* EcornAnimationDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F595F9F62700C50800CB715A /* keyAnimationController */,
 				C48999B626FF27FE00970C4D /* BaseAnimationViewController */,
 				C48999B326FF26F300970C4D /* Base */,
 				C489999F26FF23FE00970C4D /* AppDelegate.swift */,
@@ -114,6 +117,14 @@
 				C48999B726FF283F00970C4D /* BaseAnimationViewController.swift */,
 			);
 			path = BaseAnimationViewController;
+			sourceTree = "<group>";
+		};
+		F595F9F62700C50800CB715A /* keyAnimationController */ = {
+			isa = PBXGroup;
+			children = (
+				F595F9F72700C55800CB715A /* KeyAnimationController.swift */,
+			);
+			path = keyAnimationController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +247,7 @@
 				C48999A426FF23FE00970C4D /* ViewController.swift in Sources */,
 				C48999A026FF23FE00970C4D /* AppDelegate.swift in Sources */,
 				C48999A226FF23FE00970C4D /* SceneDelegate.swift in Sources */,
+				F595F9F82700C55800CB715A /* KeyAnimationController.swift in Sources */,
 				C48999BA26FF292700970C4D /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

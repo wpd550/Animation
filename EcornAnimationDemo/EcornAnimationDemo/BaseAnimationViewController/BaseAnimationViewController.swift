@@ -91,6 +91,7 @@ extension BaseAnimationViewController{
         view_Body.layer.add(animation, forKey: "scaleAnimation")
     }
     
+    //透明度
     func opacityAnimation(){
         let animation = CABasicAnimation.init(keyPath: "opacity")
         animation.fromValue = NSNumber.init(value: 1.0)
@@ -99,6 +100,7 @@ extension BaseAnimationViewController{
         view_Body.layer.add(animation, forKey: "opacityAnimation")
     }
     
+    //背景颜色
     func backgroundAnimation(){
         let animation = CABasicAnimation.init(keyPath: "backgroundColor")
         animation.toValue = UIColor.green.cgColor //因为layer层动画, 所以需要使用cgColor

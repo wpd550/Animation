@@ -95,7 +95,19 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("select index %@",indexPath)
-        let vc:BaseViewController = BaseAnimationViewController.init(enterType: indexPath.row)
+        var vc:BaseViewController!
+        switch(indexPath.section){
+        case 0:
+            vc = BaseAnimationViewController.init(enterType: indexPath.row)
+            navigationController?.pushViewController(vc, animated: true)
+        case 1:
+            vc = KeyAnimationController.init(enterType: indexPath.row)
+        default:
+            break
+        }
+        guard let vc = vc else {
+            return
+        }
         navigationController?.pushViewController(vc, animated: true)
     }
     
